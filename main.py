@@ -27,7 +27,7 @@ def main():
 
         window.blit(game_map, (0, 0))
         cars.draw(window)
-       
+        car.draw_sensors(window)
         pygame.display.flip()
 
         clock.tick_busy_loop(60)
