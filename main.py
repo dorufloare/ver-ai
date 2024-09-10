@@ -1,6 +1,6 @@
 import pygame
-from lib.controls import *
 from lib.globals import *
+from lib.controls import *
 from lib.car import Car
 from lib.utils import *
 
@@ -27,7 +27,10 @@ def main():
 
         window.blit(game_map, (0, 0))
         cars.draw(window)
-        car.draw_sensors(window)
+      
+        if (DRAW_SENSORS):
+            car.draw_sensors(window)
+
         pygame.display.flip()
 
         clock.tick_busy_loop(60)
